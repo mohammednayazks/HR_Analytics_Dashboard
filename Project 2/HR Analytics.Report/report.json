@@ -1,0 +1,183 @@
+{
+  "config": "{\"version\":\"5.57\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU08\",\"version\":\"5.57\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "6b400b87e3b3c54906e2",
+      "config": "{\"acceptsFilterContext\":1}",
+      "name": "438d5c6ecab23e1451c5"
+    }
+  ],
+  "publicCustomVisuals": [
+    "PictureThis"
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "8501562707132150303302.png",
+            "path": "8501562707132150303302.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU08",
+            "path": "BaseThemes/CY24SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"outspace\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.6}}}}}}}]}}",
+      "displayName": "HR Analytics Overview",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "6b400b87e3b3c54906e2",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"26f07dace84412fe8727\",\"layouts\":[{\"id\":0,\"position\":{\"x\":524,\"y\":423,\"z\":9000,\"width\":450,\"height\":288,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Y\":[{\"queryRef\":\"Geo Data.Lattitude\"}],\"X\":[{\"queryRef\":\"Geo Data.Longitude\"}],\"Size\":[{\"queryRef\":\"CountNonNull(HRIS.EmployeeNumber)\"}],\"Series\":[{\"queryRef\":\"Geo Data.City\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"Geo Data\",\"Type\":0},{\"Name\":\"h\",\"Entity\":\"HRIS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Lattitude\"},\"Name\":\"Geo Data.Lattitude\",\"NativeReferenceName\":\"Lattitude\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Longitude\"},\"Name\":\"Geo Data.Longitude\",\"NativeReferenceName\":\"Longitude\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"EmployeeNumber\"}},\"Function\":5},\"Name\":\"CountNonNull(HRIS.EmployeeNumber)\",\"NativeReferenceName\":\"Employees By\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"City\"},\"Name\":\"Geo Data.City\",\"NativeReferenceName\":\"City\"}]},\"columnProperties\":{\"CountNonNull(HRIS.EmployeeNumber)\":{\"displayName\":\"Employees By\"}},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 288.00,
+          "width": 450.00,
+          "x": 524.00,
+          "y": 423.00,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"297046a608c46edb1bb7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":984,\"y\":77,\"z\":8000,\"width\":296,\"height\":634,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"keyDriversVisual\",\"projections\":{\"Target\":[{\"queryRef\":\"HRIS.Attrition\"}],\"ExplainBy\":[{\"queryRef\":\"Sum(HRIS.YearsAtCompany)\"},{\"queryRef\":\"Sum(HRIS.StockOptionLevel)\"},{\"queryRef\":\"Sum(HRIS.PerformanceRating)\"},{\"queryRef\":\"HRIS.OverTime\"},{\"queryRef\":\"HRIS.MaritalStatus\"},{\"queryRef\":\"HRIS.BusinessTravel\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HRIS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Attrition\"},\"Name\":\"HRIS.Attrition\",\"NativeReferenceName\":\"Attrition\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"YearsAtCompany\"}},\"Function\":0},\"Name\":\"Sum(HRIS.YearsAtCompany)\",\"NativeReferenceName\":\"Years At Company\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"StockOptionLevel\"}},\"Function\":0},\"Name\":\"Sum(HRIS.StockOptionLevel)\",\"NativeReferenceName\":\" Stock Option Level\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"PerformanceRating\"}},\"Function\":0},\"Name\":\"Sum(HRIS.PerformanceRating)\",\"NativeReferenceName\":\" Performance Rating\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"OverTime\"},\"Name\":\"HRIS.OverTime\",\"NativeReferenceName\":\"OverTime\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"MaritalStatus\"},\"Name\":\"HRIS.MaritalStatus\",\"NativeReferenceName\":\"MaritalStatus\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"BusinessTravel\"},\"Name\":\"HRIS.BusinessTravel\",\"NativeReferenceName\":\"BusinessTravel\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"YearsAtCompany\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(HRIS.YearsAtCompany)\":{\"displayName\":\"Years At Company\"},\"Sum(HRIS.StockOptionLevel)\":{\"displayName\":\" Stock Option Level\"},\"Sum(HRIS.PerformanceRating)\":{\"displayName\":\" Performance Rating\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"keyDrivers\":[{\"properties\":{\"targetValue\":{\"expr\":{\"Literal\":{\"Value\":\"'''Yes'''\"}}},\"selectedAnalysis\":{\"expr\":{\"Literal\":{\"Value\":\"'keyInfluencers'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 634.00,
+          "width": 296.00,
+          "x": 984.00,
+          "y": 77.00,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"3a71219925e527119281\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":77,\"z\":0,\"width\":221,\"height\":124,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(HRIS.EmployeeNumber)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HRIS\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"EmployeeNumber\"}},\"Function\":5},\"Name\":\"CountNonNull(HRIS.EmployeeNumber)\",\"NativeReferenceName\":\"Active Employees\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"EmployeeNumber\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(HRIS.EmployeeNumber)\":{\"displayName\":\"Active Employees\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Arial Black'''\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 124.00,
+          "width": 221.00,
+          "x": 16.00,
+          "y": 77.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"4b8337fc149e81b0e9f6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1054,\"y\":13,\"z\":11002,\"width\":100,\"height\":40}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'information'\"}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 1054.00,
+          "y": 13.00,
+          "z": 11002.00
+        },
+        {
+          "config": "{\"name\":\"50ec3be4eaa26cd59bc3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":204,\"z\":6000,\"width\":221,\"height\":122,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(HRIS.Attrition Count)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HRIS\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Attrition Count\"}},\"Function\":0},\"Name\":\"Sum(HRIS.Attrition Count)\",\"NativeReferenceName\":\"Attrition Count\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Attrition Count\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(HRIS.Attrition Count)\":{\"displayName\":\"Attrition Count\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Arial Black'''\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 122.00,
+          "width": 221.00,
+          "x": 16.00,
+          "y": 204.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"60ea9e6ba250c715b1d1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":154,\"y\":0,\"z\":10000,\"width\":1073,\"height\":65,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"People Analytics Dashboard\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Segoe UI Light\",\"fontSize\":\"28pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 65.00,
+          "width": 1073.00,
+          "x": 154.00,
+          "y": 0.00,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"808c63048d6c1adf4c2a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":524,\"y\":209,\"z\":1000,\"width\":450,\"height\":207,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"HRIS.Gender\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(HRIS.EmployeeNumber)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HRIS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Gender\"},\"Name\":\"HRIS.Gender\",\"NativeReferenceName\":\"Gender\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"EmployeeNumber\"}},\"Function\":5},\"Name\":\"CountNonNull(HRIS.EmployeeNumber)\",\"NativeReferenceName\":\"Employees by Gender\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"EmployeeNumber\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(HRIS.EmployeeNumber)\":{\"displayName\":\"Employees by Gender\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"HRIS\"}},\"Property\":\"Gender\"}},\"Right\":{\"Literal\":{\"Value\":\"'Male'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"HRIS\"}},\"Property\":\"Gender\"}},\"Right\":{\"Literal\":{\"Value\":\"'Female'\"}}}}}]}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Employees by Gender'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 207.00,
+          "width": 450.00,
+          "x": 524.00,
+          "y": 209.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"9e32a97ea138b7d4642a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":244,\"y\":204,\"z\":5000,\"width\":273,\"height\":122,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"gauge\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(HRIS.PerformanceRating)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HRIS\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"PerformanceRating\"}},\"Function\":1},\"Name\":\"Sum(HRIS.PerformanceRating)\",\"NativeReferenceName\":\"Performance Rating\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"PerformanceRating\"}},\"Function\":1}}}]},\"columnProperties\":{\"Sum(HRIS.PerformanceRating)\":{\"displayName\":\"Performance Rating\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"axis\":[{\"properties\":{\"min\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"max\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}},\"target\":{\"expr\":{\"Literal\":{\"Value\":\"3.5D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 122.00,
+          "width": 273.00,
+          "x": 244.00,
+          "y": 204.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"d19e78af9df38e915c66\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1162,\"y\":13,\"z\":11001,\"width\":100,\"height\":40}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'reset'\"}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 1162.00,
+          "y": 13.00,
+          "z": 11001.00
+        },
+        {
+          "config": "{\"name\":\"d227dec3f6bd97534a94\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":336,\"z\":7000,\"width\":501,\"height\":196,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"HRIS.YearsAtCompany\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(HRIS.EmployeeNumber)\"}],\"Series\":[{\"queryRef\":\"HRIS.Attrition\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HRIS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"YearsAtCompany\"},\"Name\":\"HRIS.YearsAtCompany\",\"NativeReferenceName\":\"Years At Company\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"EmployeeNumber\"}},\"Function\":5},\"Name\":\"CountNonNull(HRIS.EmployeeNumber)\",\"NativeReferenceName\":\"Employees\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Attrition\"},\"Name\":\"HRIS.Attrition\",\"NativeReferenceName\":\"Attrition\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"EmployeeNumber\"}},\"Function\":5}}}]},\"columnProperties\":{\"HRIS.YearsAtCompany\":{\"displayName\":\"Years At Company\"},\"CountNonNull(HRIS.EmployeeNumber)\":{\"displayName\":\"Employees\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 196.00,
+          "width": 501.00,
+          "x": 16.00,
+          "y": 336.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"d621d6b7d3636cd86abd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":547,\"z\":2000,\"width\":501,\"height\":164,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"HRIS.Age (bins)\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(HRIS.EmployeeNumber)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HRIS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Age (bins)\"},\"Name\":\"HRIS.Age (bins)\",\"NativeReferenceName\":\"Age (bins)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"EmployeeNumber\"}},\"Function\":5},\"Name\":\"CountNonNull(HRIS.EmployeeNumber)\",\"NativeReferenceName\":\"Count of EmployeeNumber\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"EmployeeNumber\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 164.00,
+          "width": 501.00,
+          "x": 16.00,
+          "y": 547.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"e6edc2ef7cfd17ab7872\",\"layouts\":[{\"id\":0,\"position\":{\"x\":244,\"y\":77,\"z\":4000,\"width\":273,\"height\":124,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"gauge\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Engagement Survey.JobSatisfaction)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"Engagement Survey\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"JobSatisfaction\"}},\"Function\":1},\"Name\":\"Sum(Engagement Survey.JobSatisfaction)\",\"NativeReferenceName\":\"Job Satisfaction\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"JobSatisfaction\"}},\"Function\":1}}}]},\"columnProperties\":{\"Sum(Engagement Survey.JobSatisfaction)\":{\"displayName\":\"Job Satisfaction\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"axis\":[{\"properties\":{\"min\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"max\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}},\"target\":{\"expr\":{\"Literal\":{\"Value\":\"3.5D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 124.00,
+          "width": 273.00,
+          "x": 244.00,
+          "y": 77.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"fca715e5ef8a3d43ee52\",\"layouts\":[{\"id\":0,\"position\":{\"x\":127,\"y\":0,\"z\":11000,\"width\":82,\"height\":77,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"8501562707132150303302.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 77.00,
+          "width": 82.00,
+          "x": 127.00,
+          "y": 0.00,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"fcd0d7d33e68eeab526e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":524,\"y\":77,\"z\":3000,\"width\":450,\"height\":124,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"HRIS.Department\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(HRIS.MonthlyIncome)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"HRIS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Department\"},\"Name\":\"HRIS.Department\",\"NativeReferenceName\":\"Department\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"MonthlyIncome\"}},\"Function\":1},\"Name\":\"Sum(HRIS.MonthlyIncome)\",\"NativeReferenceName\":\"Average of MonthlyIncome\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnFormatting\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}}},\"selector\":{\"metadata\":\"Sum(HRIS.MonthlyIncome)\"}}]}}}",
+          "filters": "[]",
+          "height": 124.00,
+          "width": 450.00,
+          "x": 524.00,
+          "y": 77.00,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

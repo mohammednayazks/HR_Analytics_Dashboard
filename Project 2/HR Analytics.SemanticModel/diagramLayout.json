@@ -1,0 +1,61 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 489,
+            "y": 265
+          },
+          "nodeIndex": "Engagement Survey",
+          "nodeLineageTag": "00bad5d2-4df2-4d30-9c6b-c4e02b7a7159",
+          "size": {
+            "height": 479,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 10,
+            "y": 0
+          },
+          "nodeIndex": "HRIS",
+          "nodeLineageTag": "5c8c1b71-d059-4d9c-bc0f-cb036ac20663",
+          "size": {
+            "height": 659,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 829,
+            "y": 31.5
+          },
+          "nodeIndex": "Geo Data",
+          "nodeLineageTag": "7f65a70f-567b-4a9c-92a2-cd9e4b18762e",
+          "size": {
+            "height": 529,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
